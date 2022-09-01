@@ -1,4 +1,4 @@
-connection: "bq_oauth_pdt_demo"
+connection: "sample_connection_curated_by_looker"
 
 # include all the views
 include: "/views/**/*.view"
