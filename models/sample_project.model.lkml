@@ -10,4 +10,4 @@ datagroup: sample_project_default_datagroup {
 
 persist_with: sample_project_default_datagroup
 
-explore: usa_1910_current {}
+explore: users {}
