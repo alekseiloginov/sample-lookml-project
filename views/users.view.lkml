@@ -1,5 +1,6 @@
 view: users {
-  sql_table_name: `bigquery-public-data.thelook_ecommerce.users` ;;
+  # sql_table_name: `bigquery-public-data.thelook_ecommerce.users` ;;
+  sql_table_name: users ;;
 
   dimension: id {
     primary_key: yes
@@ -7,67 +8,72 @@ view: users {
     sql: ${TABLE}.id ;;
   }
 
-  dimension: age {
-    type: number
-    sql: ${TABLE}.age ;;
-  }
-
-  dimension: city {
+  dimension: name {
     type: string
-    sql: ${TABLE}.city ;;
+    sql: ${TABLE}.name ;;
   }
 
-  dimension: country {
-    type: string
-    map_layer_name: countries
-    sql: ${TABLE}.country ;;
-  }
+  # dimension: age {
+  #   type: number
+  #   sql: ${TABLE}.age ;;
+  # }
 
-  dimension_group: created {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}.created_at ;;
-  }
+  # dimension: city {
+  #   type: string
+  #   sql: ${TABLE}.city ;;
+  # }
 
-  dimension: email {
-    type: string
-    sql: ${TABLE}.email ;;
-  }
+  # dimension: country {
+  #   type: string
+  #   map_layer_name: countries
+  #   sql: ${TABLE}.country ;;
+  # }
 
-  dimension: first_name {
-    type: string
-    sql: ${TABLE}.first_name ;;
-  }
+  # dimension_group: created {
+  #   type: time
+  #   timeframes: [
+  #     raw,
+  #     time,
+  #     date,
+  #     week,
+  #     month,
+  #     quarter,
+  #     year
+  #   ]
+  #   sql: ${TABLE}.created_at ;;
+  # }
 
-  dimension: gender {
-    type: string
-    sql: ${TABLE}.gender ;;
-  }
+  # dimension: email {
+  #   type: string
+  #   sql: ${TABLE}.email ;;
+  # }
 
-  dimension: last_name {
-    type: string
-    sql: ${TABLE}.last_name ;;
-  }
+  # dimension: first_name {
+  #   type: string
+  #   sql: ${TABLE}.first_name ;;
+  # }
 
-  dimension: state {
-    type: string
-    sql: ${TABLE}.state ;;
-  }
+  # dimension: gender {
+  #   type: string
+  #   sql: ${TABLE}.gender ;;
+  # }
 
-  dimension: zip {
-    type: zipcode
-    sql: ${TABLE}.postal_code ;;
-  }
+  # dimension: last_name {
+  #   type: string
+  #   sql: ${TABLE}.last_name ;;
+  # }
 
-  measure: count {
-    type: count
-  }
+  # dimension: state {
+  #   type: string
+  #   sql: ${TABLE}.state ;;
+  # }
+
+  # dimension: zip {
+  #   type: zipcode
+  #   sql: ${TABLE}.postal_code ;;
+  # }
+
+  # measure: count {
+  #   type: count
+  # }
 }
